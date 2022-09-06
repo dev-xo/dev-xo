@@ -1,5 +1,3 @@
-## Stripe Stack - Coming Soon!
-
 [![Product Name Screen Shot][product-screenshot]](#)
 
 <!-- MARKDOWN LINKS & IMAGES -->
