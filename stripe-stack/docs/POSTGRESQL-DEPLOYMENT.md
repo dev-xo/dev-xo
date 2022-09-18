@@ -58,7 +58,7 @@ fly postgres attach stripe-postgres-stack-staging-db
 
 ### Setting Up Production Envs
 
-The following command will set Fly.io secrets for the current template. Fill the required `.env` variables and run the command on your console.
+We will need to set Fly.io secrets for the current template. Fill the required `.env` variables and run the following command in your console.
 
 ```sh
 flyctl secrets set NODE_ENV=production PROD_HOST_URL= GOOGLE_CLIENT_ID= GOOGLE_CLIENT_SECRET= GITHUB_CLIENT_ID= GITHUB_CLIENT_SECRET= TWITTER_CLIENT_ID= TWITTER_CLIENT_SECRET= DISCORD_CLIENT_ID= DISCORD_CLIENT_SECRET= STRIPE_PUBLIC_KEY= STRIPE_SECRET_KEY= PLAN_1_PRICE_ID= PLAN_2_PRICE_ID= PLAN_3_PRICE_ID= PROD_STRIPE_WEBHOOK_ENDPOINT_SECRET=
