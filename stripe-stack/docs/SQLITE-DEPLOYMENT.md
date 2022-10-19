@@ -47,19 +47,18 @@ fly volumes create data --size 1 --app template-name
 fly volumes create data --size 1 --app template-name-staging
 ```
 
-9. Now that everything is set up you can **commit and push** your changes to your repo.
-
-> Every commit to your `main` branch will trigger a deployment to your production environment, and every commit to your `dev` branch will trigger a deployment to your staging environment.
-
-### Setting Up Production Envs
-
-We will need to set Fly.io secrets for the current template. Fill the required `.env` variables and run the following command in your console.
+9. Set Fly.io secrets for the current template. Fill the required `.env` variables and run the following command in your console.
 
 ```sh
-flyctl secrets set NODE_ENV=production PROD_HOST_URL= GOOGLE_CLIENT_ID= GOOGLE_CLIENT_SECRET= GITHUB_CLIENT_ID= GITHUB_CLIENT_SECRET= TWITTER_CLIENT_ID= TWITTER_CLIENT_SECRET= DISCORD_CLIENT_ID= DISCORD_CLIENT_SECRET= STRIPE_PUBLIC_KEY= STRIPE_SECRET_KEY= PLAN_1_PRICE_ID= PLAN_2_PRICE_ID= PLAN_3_PRICE_ID= PROD_STRIPE_WEBHOOK_ENDPOINT_SECRET=
+flyctl secrets set NODE_ENV=production ENCRYPTION_SECRET=“” PROD_HOST_URL= GOOGLE_CLIENT_ID= GOOGLE_CLIENT_SECRET= GITHUB_CLIENT_ID= GITHUB_CLIENT_SECRET= TWITTER_CLIENT_ID= TWITTER_CLIENT_SECRET= DISCORD_CLIENT_ID= DISCORD_CLIENT_SECRET= STRIPE_PUBLIC_KEY= STRIPE_SECRET_KEY= PLAN_1_PRICE_ID= PLAN_2_PRICE_ID= PLAN_3_PRICE_ID= PROD_STRIPE_WEBHOOK_ENDPOINT_SECRET=
 ```
 
 > Notes: Development variables has opted out from this command.
+> Side note: `ENCRYPTION_SECRET=""` variable, has to be string for some reason. Otherwhise, Gives an Error at deploy time.
+
+10. Now that everything is set up you can **commit and push** your changes to your repo.
+
+> Every commit to your `main` branch will trigger a deployment to your production environment, and every commit to your `dev` branch will trigger a deployment to your staging environment.
 
 ### Connecting to your database
 
