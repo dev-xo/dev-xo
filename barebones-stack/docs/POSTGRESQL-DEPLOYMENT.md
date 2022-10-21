@@ -58,4 +58,4 @@ fly postgres attach template-name-staging-db
 
 ### Done!
 
-Return to main [Stripe Stack](https://github.com/dev-xo/stripe-postgres-stack) repository.
+Return to main [Barebones Stack](https://github.com/dev-xo/barebones-stack) repository.

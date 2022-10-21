@@ -66,4 +66,4 @@ flyctl secrets set NODE_ENV=production ENCRYPTION_SECRET= PROD_HOST_URL= GOOGLE_
 
 ### Done!
 
-Return to main [Stripe Stack](https://github.com/dev-xo/stripe-postgres-stack) repository.
+Return to main [Stripe Stack](https://github.com/dev-xo/stripe-stack) repository.

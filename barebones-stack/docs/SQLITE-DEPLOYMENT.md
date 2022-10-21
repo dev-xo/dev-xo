@@ -57,4 +57,4 @@ The SQLite database lives at `/data/sqlite.db` in your deployed application. You
 
 ### Done!
 
-Return to main [Stripe Stack](https://github.com/dev-xo/stripe-stack) repository.
+Return to main [Barebones Stack](https://github.com/dev-xo/barebones-stack) repository.
