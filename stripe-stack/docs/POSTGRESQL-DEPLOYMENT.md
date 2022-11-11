@@ -58,7 +58,7 @@ fly postgres attach template-name-staging-db
 flyctl secrets set NODE_ENV=production ENCRYPTION_SECRET= PROD_HOST_URL= GOOGLE_CLIENT_ID= GOOGLE_CLIENT_SECRET= GITHUB_CLIENT_ID= GITHUB_CLIENT_SECRET= TWITTER_CLIENT_ID= TWITTER_CLIENT_SECRET= DISCORD_CLIENT_ID= DISCORD_CLIENT_SECRET= STRIPE_PUBLIC_API_KEY= STRIPE_SECRET_API_KEY= PLAN_1_PRICE_ID= PLAN_2_PRICE_ID= PLAN_3_PRICE_ID= PROD_STRIPE_WEBHOOK_ENDPOINT_SECRET= EMAIL_PROVIDER_API_KEY=
 ```
 
-> Notes: Important: `ENCRYPTION_SECRET=""` variable, has to be string for some reason. At deploy time, throws an Error otherwhise. Development variables has opted out from this command.
+> Notes: Important: `ENCRYPTION_SECRET=""` variable requires "" double quotes for some reason, otherwhise throws an Error at deploy time. Development variables has opted out from this command.
 
 10. Now that everything is set up you can **commit and push** your changes to your repo.
 

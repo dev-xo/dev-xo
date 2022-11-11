@@ -1,4 +1,4 @@
-## Welcome to Barebones PostgreSQL Stack Deployment.
+## Welcome to Barebones SQLite Deployment.
 
 This Remix Stack comes with two GitHub Actions that handle automatically deploying our app to Production and Staging environments. Prior to the first deployment, we'll need to do a few things:
 
@@ -47,7 +47,15 @@ fly volumes create data --size 1 --app template-name
 fly volumes create data --size 1 --app template-name-staging
 ```
 
-9. Now that everything is set up you can **commit and push** your changes to your repo.
+9. Set Fly.io secrets for the current template. Fill the required `.env` variables and run the following command in your console.
+
+```sh
+flyctl secrets set NODE_ENV=production ENCRYPTION_SECRET="" EMAIL_PROVIDER_API_KEY=
+```
+
+> Notes: Important: `ENCRYPTION_SECRET=""` variable requires "" double quotes for some reason, otherwhise throws an Error at deploy time. Development variables has opted out from this command.
+
+10. Now that everything is set up you can **commit and push** your changes to your repo.
 
 > Every commit to your `main` branch will trigger a deployment to your production environment, and every commit to your `dev` branch will trigger a deployment to your staging environment.
 
