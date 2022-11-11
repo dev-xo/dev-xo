@@ -1,4 +1,4 @@
-## Welcome to Barebones PostgreSQL Stack Deployment.
+## Welcome to Barebones PostgreSQL Deployment.
 
 This Remix Stack comes with two GitHub Actions that handle automatically deploying our app to Production and Staging environments. Prior to the first deployment, we'll need to do a few things:
 
