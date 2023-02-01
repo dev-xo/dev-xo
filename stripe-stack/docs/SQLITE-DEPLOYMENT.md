@@ -54,11 +54,12 @@ fly volumes create data --size 1 --app template-name-staging
 9. Set Fly.io secrets for the current template. Fill the required `.env` variables and run the following command in your console.
 
 ```sh
-flyctl secrets set NODE_ENV=production ENCRYPTION_SECRET="" PROD_HOST_URL= GOOGLE_CLIENT_ID= GOOGLE_CLIENT_SECRET= GITHUB_CLIENT_ID= GITHUB_CLIENT_SECRET= TWITTER_CLIENT_ID= TWITTER_CLIENT_SECRET= DISCORD_CLIENT_ID= DISCORD_CLIENT_SECRET= STRIPE_PUBLIC_API_KEY= STRIPE_SECRET_API_KEY= STRIPE_PLAN_1_PRICE_ID= STRIPE_PLAN_2_PRICE_ID= STRIPE_PLAN_3_PRICE_ID= PROD_STRIPE_WEBHOOK_ENDPOINT_SECRET= EMAIL_PROVIDER_API_KEY=
+flyctl secrets set NODE_ENV=production ENCRYPTION_SECRET="" PROD_HOST_URL="my-app-name.fly.dev" GOOGLE_CLIENT_ID= GOOGLE_CLIENT_SECRET= GITHUB_CLIENT_ID= GITHUB_CLIENT_SECRET= TWITTER_CLIENT_ID= TWITTER_CLIENT_SECRET= DISCORD_CLIENT_ID= DISCORD_CLIENT_SECRET= STRIPE_PUBLIC_API_KEY= STRIPE_SECRET_API_KEY= STRIPE_PLAN_1_PRICE_ID= STRIPE_PLAN_2_PRICE_ID= STRIPE_PLAN_3_PRICE_ID= PROD_STRIPE_WEBHOOK_ENDPOINT_SECRET= EMAIL_PROVIDER_API_KEY=
 ```
 
 > **Note**
-> Important❗️: `ENCRYPTION_SECRET=""` variable requires "" double quotes for some reason, otherwhise throws an Error at deploy time. Development variables has opted out from this command.
+> Important❗️: `ENCRYPTION_SECRET=""` variable requires "" double quotes for some reason, otherwise throws an Error at deploy time. Development variables has opted out from this command.
+> Also the `PROD_HOST_URL` variable requires the full name of your project, including the `.fly.dev` domain.
 
 10. Now that everything is set up you can **commit and push** your changes to your repo.
 
