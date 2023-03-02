@@ -8,9 +8,10 @@ This Remix Stack comes with two GitHub Actions that handle automatically deployi
 
 ```sh
 fly auth signup
+fly auth login
 ```
 
-3. Create two apps on Fly, one for staging and one for production:
+3. Create two apps on Fly, one for staging and one for production: _(Staging steps are optional, you can skip them for the entire process.)_
 
 ```sh
 fly apps create template-name
@@ -44,7 +45,7 @@ fly secrets set SESSION_SECRET=$(openssl rand -hex 32) --app template-name-stagi
 > **Note**
 > If you don't have openssl installed, you can also use [1password](https://1password.com/password-generator/) to generate a random secret, just replace `$(openssl rand -hex 32)` with the generated secret.
 
-8. Create and attach a database for both your staging and production environments. Run the following:
+8. Create a persistent volume for your PostgreSQL database. Run the following:
 
 ```sh
 fly postgres create --name template-name-db
@@ -60,14 +61,18 @@ fly postgres attach template-name-staging-db
 9. Set Fly.io secrets for the current template. Fill the required `.env` variables and run the following command in your console.
 
 ```sh
-flyctl secrets set NODE_ENV=production ENCRYPTION_SECRET="" PROD_HOST_URL="my-app-name.fly.dev" GOOGLE_CLIENT_ID= GOOGLE_CLIENT_SECRET= GITHUB_CLIENT_ID= GITHUB_CLIENT_SECRET= TWITTER_CLIENT_ID= TWITTER_CLIENT_SECRET= DISCORD_CLIENT_ID= DISCORD_CLIENT_SECRET= STRIPE_PUBLIC_API_KEY= STRIPE_SECRET_API_KEY= STRIPE_PLAN_1_PRICE_ID= STRIPE_PLAN_2_PRICE_ID= STRIPE_PLAN_3_PRICE_ID= PROD_STRIPE_WEBHOOK_ENDPOINT_SECRET= EMAIL_PROVIDER_API_KEY=
+flyctl secrets set NODE_ENV=production ENCRYPTION_SECRET="" PROD_HOST_URL="my-app-name.fly.dev" EMAIL_PROVIDER_API_KEY= GOOGLE_CLIENT_ID= GOOGLE_CLIENT_SECRET= STRIPE_PUBLIC_KEY= STRIPE_SECRET_KEY= PROD_STRIPE_WEBHOOK_ENDPOINT=
 ```
 
 > **Note**
-> Important❗️: `ENCRYPTION_SECRET=""` variable requires "" double quotes for some reason, otherwise throws an Error at deploy time. Development variables has opted out from this command.
-> Also the `PROD_HOST_URL` variable requires the full name of your project, including the `.fly.dev` domain.
+> Important❗️: `ENCRYPTION_SECRET=""` variable requires "" double quotes, otherwise throws an Error at deploy time. Development variables has opted out from this command.
+> Also the `PROD_HOST_URL` variable, requires the full name of your deployed project, including the `.fly.dev` domain. This could also set later from fly.io dashboard.
 
-1.  Now that everything is set up you can **commit and push** your changes to your repo.
+10. Now that everything is set up you can **commit and push** your changes to your repository _(this will automatically deploy your app)_ or you can just directly deploy to Fly.io by running the following command:
+
+```sh
+flyctl deploy
+```
 
 > **Note**
 > Every commit to your `main` branch will trigger a deployment to your production environment, and every commit to your `dev` branch will trigger a deployment to your staging environment.
@@ -75,3 +80,4 @@ flyctl secrets set NODE_ENV=production ENCRYPTION_SECRET="" PROD_HOST_URL="my-ap
 ### Done!
 
 Return to main [Stripe Stack](https://github.com/dev-xo/stripe-stack) repository.
+Also leave a ⭐️ if you found it useful! Thank you!
