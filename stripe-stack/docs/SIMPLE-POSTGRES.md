@@ -1,4 +1,4 @@
-## Welcome to Stripe Stack SQLite Deployment.
+## Welcome to Stripe Stack Postgres Deployment.
 
 This is the Simple Deployment for [Fly.io](https://fly.io). If you are new to Fly.io, I'll recommend checking the [Fly.io Getting Started](https://fly.io/docs/getting-started/) guide.
 
@@ -34,10 +34,11 @@ fly secrets set SESSION_SECRET=$(openssl rand -hex 32) --app template-name
 > **Note**
 > If you don't have openssl installed, you can also use [1password](https://1password.com/password-generator/) to generate a random secret, just replace `$(openssl rand -hex 32)` with the generated secret.
 
-5. Create a persistent volume for your SQLite database. Run the following:
+5. Create a persistent volume for your PostgreSQL database. Run the following:
 
 ```sh
-fly volumes create data --size 1 --app template-name
+fly postgres create --name template-name-db
+fly postgres attach template-name-db
 ```
 
 6. Set up your Fly.io secrets for the current app. Fill the bellow `.env` variables and run the following command in your console.
@@ -55,10 +56,6 @@ flyctl secrets set NODE_ENV=production ENCRYPTION_SECRET="" PROD_HOST_URL="https
 ```sh
 flyctl deploy
 ```
-
-### Connecting to your database
-
-The SQLite database lives at `/data/sqlite.db` in our deployed application. You can connect to the live database by running `fly ssh console -C database-cli`.
 
 ### Done!
 
