@@ -2,7 +2,7 @@
 
 **A Full-Stack Developer from Spain.**
 <br />
-_Currently focused on [Remix.run](https://github.com/remix-run) development._
+_Currently focused on [Remix.run](https://github.com/remix-run) projects._
 
 I'm also releasing open-source projects from time to time.
 <br />
