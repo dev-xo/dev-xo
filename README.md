@@ -1,6 +1,10 @@
+![Banner](https://raw.githubusercontent.com/dev-xo/dev-xo/main/README_IMG.jpg)
+
 ### Hey, I'm Daniel 👋🏻!
 
-A **Software Engineer** aiming to improve your **Developer Experience** through **OSS**.
+A **Senior Software Engineer** aiming to improve your **Developer Experience**.
+
+You can find me on [Twitter](https://twitter.com/DanielKanem) or [Bento](https://bento.me/dev-xo).
 
 📍 Remote **𝕏** Spain<br />
 ✨ Developing experiences.
