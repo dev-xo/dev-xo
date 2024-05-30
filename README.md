@@ -1,8 +1,10 @@
-### Hey, I'm Daniel 👋🏻!
+<p align="center">
+    A Senior Software Engineer aiming to improve your <strong>Developer Experience</strong>.
+</p>
 
-A **Senior Software Engineer** aiming to improve your **Developer Experience**.
-
-You can find me on [Twitter](https://twitter.com/DanielKanem) & [Bento](https://bento.me/danielkanem).
-
-📍 Remote **𝕏** Spain<br />
-✨ Developing Experiences
+<p align="center">
+  <samp>
+    <a href="https://twitter.com/matheusmazeto">Twitter</a> 𝕏
+    <a href="https://www.linkedin.com/in/matheusmazeto/">Bento</a>
+  </samp>
+</p>
