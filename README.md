@@ -4,7 +4,7 @@
 
 <p align="center">
   <samp>
-    <a href="https://twitter.com/matheusmazeto">Twitter</a> 𝕏
-    <a href="https://www.linkedin.com/in/matheusmazeto/">Bento</a>
+    <a href="https://x.com/DanielKanem">Twitter</a> 𝕏
+    <a href="https://bento.me/danielkanem">Bento</a>
   </samp>
 </p>
