@@ -5,6 +5,6 @@
 <p align="center">
   <samp>
     <a href="https://x.com/DanielKanem">Twitter</a> 𝕏
-    <a href="https://pomo.day">Pomo.day</a>
+    <!-- <a href="https://pomo.day">Pomo.day</a> -->
   </samp>
 </p>
