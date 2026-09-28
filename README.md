@@ -4,7 +4,7 @@
 
 <p align="center">
   <samp>
-    <a href="https://x.com/DanielKanem">Twitter</a> 𝕏
+    <a href="https://x.com/DanielKanem">𝕏 Twitter</a>
     <!-- <a href="https://pomo.day">Pomo.day</a> -->
   </samp>
 </p>
